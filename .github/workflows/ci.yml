@@ -1,0 +1,84 @@
+name: Secure Coding Path CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install '.[dev]'
+      - run: ruff check --output-format github
+      - name: Check typography
+        run: |
+          python - <<'PY'
+          from subprocess import run
+
+          result = run(["git", "grep", "-nI", chr(0x2014)], check=False)
+          raise SystemExit(0 if result.returncode == 1 else 1)
+          PY
+
+  tests:
+    name: Tests and exports
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install '.[dev]'
+      - name: Test and measure coverage
+        shell: bash
+        run: |
+          pytest -q --cov=secure_path --cov-report=term-missing --cov-report=json:coverage.json \
+            --junitxml=pytest-results.xml
+      - name: Summarize verification
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          from xml.etree import ElementTree
+
+          suites = ElementTree.parse("pytest-results.xml").getroot()
+          tests = sum(int(suite.get("tests")) for suite in suites.findall("testsuite"))
+          totals = json.loads(Path("coverage.json").read_text())["totals"]
+          lines = f'{totals["covered_lines"]}/{totals["num_statements"]} statements'
+          summary = f'{tests} tests passed. Line coverage {totals["percent_covered"]:.2f}% ({lines}).'
+          print(summary)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as stream:
+              stream.write(f"### Verification\n\n{summary}\n")
+          PY
+      - name: Generate both sample paths with the installed CLI
+        run: |
+          secure-path build --group-size 25 --out reports/lowest-cost
+          secure-path build --group-size 25 --strategy shortest-time --out reports/shortest-time
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for strategy in ("lowest-cost", "shortest-time"):
+              reports = Path("reports") / strategy
+              assignments = json.loads((reports / "basic-lms.json").read_text())
+              assert len(assignments) == 1 and 0 < assignments[0]["duration_minutes"] <= 8 * 60
+              assert (reports / "cost-comparison.xlsx").is_file()
+              assert (reports / "overview.html").is_file()
+          PY
+      - uses: actions/upload-artifact@v6
+        with:
+          name: learning-path
+          path: |
+            reports/
+            coverage.json
+            pytest-results.xml
+          if-no-files-found: error
