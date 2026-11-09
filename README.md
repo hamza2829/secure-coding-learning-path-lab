@@ -48,6 +48,8 @@ The duration is the selected Basic path's sum in minutes. Due date and repeat ru
 
 ## Verification
 
+**53 tests passed** on Python 3.12 with **100.00% line coverage** (486/486 statements).
+
 GitHub Actions runs Ruff, pytest with line coverage, and the installed CLI with both sample alternatives. The `learning-path` artifact contains the generated exports and verification evidence. [GitHub Actions workflow](https://github.com/hamza2829/secure-coding-learning-path-lab/actions/workflows/ci.yml)
 
 ## Limits
