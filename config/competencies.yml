@@ -1,0 +1,92 @@
+edition: '2025'
+competencies:
+  - tag: access-control
+    category: A01
+    name: "Broken Access Control"
+    objective: "Enforce permissions on each operation and test that users cannot cross tenant boundaries."
+    practices:
+      "Java": "Test ownership checks on repository queries."
+      "JavaScript": "Apply authorization middleware and test object-level access."
+      "Python": "Check ownership in views and test cross-tenant requests."
+      "C#": "Apply resource-based authorization to individual records."
+  - tag: configuration
+    category: A02
+    name: "Security Misconfiguration"
+    objective: "Set secure defaults, remove debug surfaces, and review environment-specific settings."
+    practices:
+      "Java": "Separate production settings from local configuration."
+      "JavaScript": "Disable verbose error responses and restrict origins."
+      "Python": "Check debug and cookie settings in a production profile."
+      "C#": "Review hosting defaults and disable development exceptions."
+  - tag: supply-chain
+    category: A03
+    name: "Software Supply Chain Failures"
+    objective: "Review dependencies, lock versions, and verify the origin of build inputs."
+    practices:
+      "Java": "Review transitive dependencies and verify build inputs."
+      "JavaScript": "Commit a lockfile and review changes to transitive packages."
+      "Python": "Pin dependencies and verify downloaded distributions."
+      "C#": "Review package sources and locked transitive dependencies."
+  - tag: cryptography
+    category: A04
+    name: "Cryptographic Failures"
+    objective: "Select maintained cryptographic APIs and keep keys separate from the data they protect."
+    practices:
+      "Java": "Use approved platform primitives and manage key rotation."
+      "JavaScript": "Use the runtime crypto API and inject keys from protected storage."
+      "Python": "Use a maintained authenticated encryption API and rotate keys."
+      "C#": "Use managed keys and authenticated encryption in the runtime."
+  - tag: injection
+    category: A05
+    name: "Injection"
+    objective: "Separate commands from untrusted input and test parameterized queries."
+    practices:
+      "Java": "Bind query parameters and test malicious input."
+      "JavaScript": "Bind database parameters and encode values at HTML sinks."
+      "Python": "Use parameter binding and avoid passing user input to shell commands."
+      "C#": "Use parameters for database access and avoid dynamic command text."
+  - tag: secure-design
+    category: A06
+    name: "Insecure Design"
+    objective: "Identify trust boundaries and model abuse before choosing controls."
+    practices:
+      "Java": "Model abuse of a service operation and add negative tests."
+      "JavaScript": "Map browser and server trust boundaries and review misuse cases."
+      "Python": "Model abuse of data imports before defining input checks."
+      "C#": "Translate threat model assumptions into acceptance tests."
+  - tag: authentication
+    category: A07
+    name: "Authentication Failures"
+    objective: "Protect sign-in, session renewal, and account recovery from abuse."
+    practices:
+      "Java": "Test session renewal and secure cookie configuration."
+      "JavaScript": "Use secure cookies and test token expiration and rotation."
+      "Python": "Review rate limits and account recovery in the web stack."
+      "C#": "Test password reset tokens and session expiry."
+  - tag: integrity
+    category: A08
+    name: "Software or Data Integrity Failures"
+    objective: "Verify provenance and integrity before trusting artifacts or deserializing data."
+    practices:
+      "Java": "Reject untrusted serialized objects and verify artifact signatures."
+      "JavaScript": "Validate signed payloads before importing data."
+      "Python": "Use a safe data format and verify signed update metadata."
+      "C#": "Validate signatures before accepting deployment artifacts."
+  - tag: logging
+    category: A09
+    name: "Security Logging and Alerting Failures"
+    objective: "Emit useful security events, redact sensitive data, and rehearse alert handling."
+    practices:
+      "Java": "Record access denials and verify that logs omit secrets."
+      "JavaScript": "Attach correlation IDs to security events and test redaction."
+      "Python": "Capture authentication events without logging credentials."
+      "C#": "Route structured events to alerts and test sensitive-data redaction."
+  - tag: exceptions
+    category: A10
+    name: "Mishandling of Exceptional Conditions"
+    objective: "Fail closed, handle unexpected input, and clean up state after failures."
+    practices:
+      "Java": "Roll back failed operations and test resource cleanup."
+      "JavaScript": "Reject incomplete operations and handle promise failures centrally."
+      "Python": "Handle expected exceptions narrowly and release resources reliably."
+      "C#": "Translate internal failures to safe responses and test rollback."

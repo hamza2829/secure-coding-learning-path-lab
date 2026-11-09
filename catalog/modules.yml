@@ -1,0 +1,367 @@
+# Fictional offers and illustrative per-person prices
+sample_data: true
+currency: USD
+entries:
+  - id: "module-access-control-reading"
+    title: "Object ownership checks"
+    kind: module
+    provider: "Provider A"
+    topics: ["access-control"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 2
+  - id: "module-access-control-lab"
+    title: "Practice object ownership checks"
+    kind: module
+    provider: "Provider C"
+    topics: ["access-control"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 6
+  - id: "module-configuration-reading"
+    title: "Secure defaults checklist"
+    kind: module
+    provider: "Provider A"
+    topics: ["configuration"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 3
+  - id: "module-configuration-lab"
+    title: "Practice secure defaults checklist"
+    kind: module
+    provider: "Provider C"
+    topics: ["configuration"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 7
+  - id: "module-supply-chain-reading"
+    title: "Dependency intake review"
+    kind: module
+    provider: "Provider A"
+    topics: ["supply-chain"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 4
+  - id: "module-supply-chain-lab"
+    title: "Practice dependency intake review"
+    kind: module
+    provider: "Provider C"
+    topics: ["supply-chain"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 8
+  - id: "module-cryptography-reading"
+    title: "Keys and encrypted data"
+    kind: module
+    provider: "Provider A"
+    topics: ["cryptography"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 5
+  - id: "module-cryptography-lab"
+    title: "Practice keys and encrypted data"
+    kind: module
+    provider: "Provider C"
+    topics: ["cryptography"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 6
+  - id: "module-injection-reading"
+    title: "Safe query parameters"
+    kind: module
+    provider: "Provider A"
+    topics: ["injection"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 2
+  - id: "module-injection-lab"
+    title: "Practice safe query parameters"
+    kind: module
+    provider: "Provider C"
+    topics: ["injection"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 7
+  - id: "module-secure-design-reading"
+    title: "Mapping trust boundaries"
+    kind: module
+    provider: "Provider A"
+    topics: ["secure-design"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 3
+  - id: "module-secure-design-lab"
+    title: "Practice mapping trust boundaries"
+    kind: module
+    provider: "Provider C"
+    topics: ["secure-design"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 8
+  - id: "module-authentication-reading"
+    title: "Sessions and account recovery"
+    kind: module
+    provider: "Provider A"
+    topics: ["authentication"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 4
+  - id: "module-authentication-lab"
+    title: "Practice sessions and account recovery"
+    kind: module
+    provider: "Provider C"
+    topics: ["authentication"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 6
+  - id: "module-integrity-reading"
+    title: "Verifying artifact integrity"
+    kind: module
+    provider: "Provider A"
+    topics: ["integrity"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 5
+  - id: "module-integrity-lab"
+    title: "Practice verifying artifact integrity"
+    kind: module
+    provider: "Provider C"
+    topics: ["integrity"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 7
+  - id: "module-logging-reading"
+    title: "Security event basics"
+    kind: module
+    provider: "Provider A"
+    topics: ["logging"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 2
+  - id: "module-logging-lab"
+    title: "Practice security event basics"
+    kind: module
+    provider: "Provider C"
+    topics: ["logging"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 8
+  - id: "module-exceptions-reading"
+    title: "Safe exception responses"
+    kind: module
+    provider: "Provider A"
+    topics: ["exceptions"]
+    duration_hours: 0.75
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 3
+  - id: "module-exceptions-lab"
+    title: "Practice safe exception responses"
+    kind: module
+    provider: "Provider C"
+    topics: ["exceptions"]
+    duration_hours: 1
+    level: introductory
+    format: "hands on lab"
+    language: en
+    languages: []
+    cost_per_person: 6
+  - id: "lab-java-ownership"
+    title: "Test tenant isolation in Java"
+    kind: module
+    provider: "Provider A"
+    topics: ["access-control"]
+    duration_hours: 1.5
+    level: intermediate
+    format: "hands on lab"
+    language: en
+    languages: ["Java"]
+    cost_per_person: 15
+  - id: "lab-cs-authz"
+    title: "Harden resource authorization in C#"
+    kind: module
+    provider: "Provider A"
+    topics: ["access-control"]
+    duration_hours: 1.75
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["C#"]
+    cost_per_person: 17
+  - id: "lab-js-deps"
+    title: "Review lockfile and provenance in JavaScript"
+    kind: module
+    provider: "Provider A"
+    topics: ["supply-chain"]
+    duration_hours: 2
+    level: intermediate
+    format: "hands on lab"
+    language: en
+    languages: ["JavaScript"]
+    cost_per_person: 19
+  - id: "lab-py-crypto"
+    title: "Rotate encryption keys in Python"
+    kind: module
+    provider: "Provider A"
+    topics: ["cryptography"]
+    duration_hours: 1.5
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["Python"]
+    cost_per_person: 21
+  - id: "lab-js-queries"
+    title: "Test parameterized queries in JavaScript"
+    kind: module
+    provider: "Provider A"
+    topics: ["injection"]
+    duration_hours: 1.75
+    level: intermediate
+    format: "hands on lab"
+    language: en
+    languages: ["JavaScript"]
+    cost_per_person: 23
+  - id: "lab-py-injection"
+    title: "Trace query and shell injection in Python"
+    kind: module
+    provider: "Provider A"
+    topics: ["injection"]
+    duration_hours: 2
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["Python"]
+    cost_per_person: 25
+  - id: "lab-cs-alerts"
+    title: "Build security alerts in C#"
+    kind: module
+    provider: "Provider A"
+    topics: ["logging"]
+    duration_hours: 1.5
+    level: intermediate
+    format: "hands on lab"
+    language: en
+    languages: ["C#"]
+    cost_per_person: 27
+  - id: "lab-java-failure"
+    title: "Test failure cleanup in Java"
+    kind: module
+    provider: "Provider A"
+    topics: ["exceptions"]
+    duration_hours: 1.75
+    level: intermediate
+    format: "hands on lab"
+    language: en
+    languages: ["Java"]
+    cost_per_person: 29
+  - id: "lab-java-hosting"
+    title: "Review service configuration in Java"
+    kind: module
+    provider: "Provider A"
+    topics: ["configuration"]
+    duration_hours: 2
+    level: intermediate
+    format: "hands on lab"
+    language: en
+    languages: ["Java"]
+    cost_per_person: 31
+  - id: "lab-js-sessions"
+    title: "Harden browser session renewal"
+    kind: module
+    provider: "Provider A"
+    topics: ["authentication"]
+    duration_hours: 1.5
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["JavaScript"]
+    cost_per_person: 33
+  - id: "lab-py-artifacts"
+    title: "Validate signed import data in Python"
+    kind: module
+    provider: "Provider A"
+    topics: ["integrity"]
+    duration_hours: 1.75
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["Python"]
+    cost_per_person: 35
+  - id: "lab-cs-design"
+    title: "Model abusive workflows in C#"
+    kind: module
+    provider: "Provider A"
+    topics: ["secure-design"]
+    duration_hours: 2
+    level: intermediate
+    format: "hands on lab"
+    language: en
+    languages: ["C#"]
+    cost_per_person: 37
+  - id: "module-failure-de"
+    title: "Fehler sicher behandeln"
+    kind: module
+    provider: "Provider C"
+    topics: ["exceptions"]
+    duration_hours: 0.5
+    level: introductory
+    format: "video"
+    language: de
+    languages: []
+    cost_per_person: 2

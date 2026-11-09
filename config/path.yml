@@ -1,0 +1,18 @@
+# Illustrative policy for the fictional catalog
+basic_max_hours: 8
+instruction_language: en
+advanced_targets:
+  - {category: A01, language: Java, minimum_level: intermediate}
+  - {category: A01, language: "C#", minimum_level: advanced}
+  - {category: A03, language: JavaScript, minimum_level: intermediate}
+  - {category: A04, language: Python, minimum_level: advanced}
+  - {category: A05, language: JavaScript, minimum_level: intermediate}
+  - {category: A05, language: Python, minimum_level: advanced}
+  - {category: A09, language: "C#", minimum_level: intermediate}
+  - {category: A10, language: Java, minimum_level: intermediate}
+assignment:
+  title: Secure Coding Basic
+  description: "Compulsory introduction to the ten OWASP Top 10:2025 web application risk categories."
+  due_date_rule: Within 30 calendar days of assignment
+  repeat_interval: Every 12 months
+  target_group: Software development staff

@@ -1,0 +1,158 @@
+# Fictional offers and illustrative per-person prices
+sample_data: true
+currency: USD
+entries:
+  - id: "course-identity"
+    title: "Access control and secure defaults"
+    kind: course
+    provider: "Provider B"
+    topics: ["access-control","configuration"]
+    duration_hours: 0.75
+    level: introductory
+    format: "video"
+    language: en
+    languages: []
+    cost_per_person: 36
+  - id: "course-dependencies"
+    title: "Dependency and encryption essentials"
+    kind: course
+    provider: "Provider B"
+    topics: ["supply-chain","cryptography"]
+    duration_hours: 0.75
+    level: introductory
+    format: "video"
+    language: en
+    languages: []
+    cost_per_person: 41
+  - id: "course-inputs"
+    title: "Safe inputs and threat modeling"
+    kind: course
+    provider: "Provider B"
+    topics: ["injection","secure-design"]
+    duration_hours: 0.75
+    level: introductory
+    format: "video"
+    language: en
+    languages: []
+    cost_per_person: 39
+  - id: "course-trust"
+    title: "Login and artifact trust"
+    kind: course
+    provider: "Provider B"
+    topics: ["authentication","integrity"]
+    duration_hours: 0.75
+    level: introductory
+    format: "video"
+    language: en
+    languages: []
+    cost_per_person: 34
+  - id: "course-failures"
+    title: "Security events and safe failures"
+    kind: course
+    provider: "Provider B"
+    topics: ["logging","exceptions"]
+    duration_hours: 0.75
+    level: introductory
+    format: "video"
+    language: en
+    languages: []
+    cost_per_person: 32
+  - id: "course-web"
+    title: "Secure web application foundations"
+    kind: course
+    provider: "Provider C"
+    topics: ["access-control","configuration","injection","authentication"]
+    duration_hours: 3
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 24
+  - id: "course-release"
+    title: "Secure delivery essentials"
+    kind: course
+    provider: "Provider C"
+    topics: ["supply-chain","integrity","logging"]
+    duration_hours: 2.5
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 20
+  - id: "course-resilience"
+    title: "Designing and handling failure"
+    kind: course
+    provider: "Provider C"
+    topics: ["secure-design","exceptions","logging"]
+    duration_hours: 2.25
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 21
+  - id: "course-data"
+    title: "Protecting application data"
+    kind: course
+    provider: "Provider C"
+    topics: ["cryptography","injection","integrity"]
+    duration_hours: 2.25
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 19
+  - id: "course-complete"
+    title: "Web risk essentials survey"
+    kind: course
+    provider: "Provider C"
+    topics: ["access-control","configuration","supply-chain","cryptography","injection","secure-design","authentication","integrity","logging","exceptions"]
+    duration_hours: 5
+    level: introductory
+    format: "reading"
+    language: en
+    languages: []
+    cost_per_person: 129
+  - id: "course-java-service"
+    title: "Java authorization and failure clinic"
+    kind: course
+    provider: "Provider B"
+    topics: ["access-control","exceptions"]
+    duration_hours: 2
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["Java"]
+    cost_per_person: 69
+  - id: "course-cs-service"
+    title: "C# authorization and logging clinic"
+    kind: course
+    provider: "Provider B"
+    topics: ["access-control","logging"]
+    duration_hours: 2
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["C#"]
+    cost_per_person: 74
+  - id: "course-js-service"
+    title: "JavaScript dependency and injection clinic"
+    kind: course
+    provider: "Provider B"
+    topics: ["supply-chain","injection"]
+    duration_hours: 2
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["JavaScript"]
+    cost_per_person: 73
+  - id: "course-py-service"
+    title: "Python encryption and injection clinic"
+    kind: course
+    provider: "Provider B"
+    topics: ["cryptography","injection"]
+    duration_hours: 2
+    level: advanced
+    format: "hands on lab"
+    language: en
+    languages: ["Python"]
+    cost_per_person: 83
